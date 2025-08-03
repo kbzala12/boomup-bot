@@ -3,7 +3,7 @@ from flask import Flask
 from threading import Thread
 
 # ========== CONFIG ==========
-BOT_TOKEN = "8324637176:AAFeKHN29fpeGA4b7w5RfvSgrOH8LRkCYmY"
+BOT_TOKEN = "8476910610:AAHQhU8iLmr1CxL_4Yj3x_VjTAgLngNg9UQ"
 ADMIN_ID = 7470248597
 YOUTUBE_CHANNEL = "https://youtube.com/@kishorsinhzala.?si=uKMVwnB7wV_yoSQN"
 TELEGRAM_GROUP = "@boomupbot10"
