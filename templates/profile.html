@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block content %}
+<h3>प्रोफ़ाइल</h3>
+<p>Telegram ID: {{ user['telegram_id'] }}</p>
+<p>Name: {{ user['name'] }}</p>
+<p>Total Coins: {{ user['coins'] }}</p>
+<button onclick="location.href='/'">Home</button>
+{% endblock %}
