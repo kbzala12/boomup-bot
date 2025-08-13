@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block content %}
+<header class="top">
+  <h2>जैकपॉट</h2>
+  <div class="banner">Read Article coins! Get coin Upto 🪙 1,000 <a href="#">Get now!</a></div>
+</header>
+<section class="special">
+  <h3>Special for you!</h3>
+  <div class="cards">
+    <div class="card orange">Super Offers<br><small>Best Offers to Get Fast</small></div>
+    <div class="card pink">Play Game<br><small>Participate in games for ticket</small></div>
+  </div>
+</section>
+<section class="videos">
+  <h3>Videos</h3>
+  <div class="video-list">
+    {% for code, url in videos.items() %}
+    <div class="vcard">
+      <img src="https://img.youtube.com/vi/{{ url.split('v=')[-1].split('?')[0] }}/hqdefault.jpg" />
+      <div class="vinfo">
+        <h4>वीडियो {{ loop.index }}</h4>
+        <a class="btn" href="/watch/{{ code }}?tid={{ request.args.get('tid','') }}">Watch Now</a>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+<nav class="bottom-nav">
+  <a>🏠</a><a>🧾</a><a>🎮</a><a>📊</a>
+</nav>
+{% endblock %}
