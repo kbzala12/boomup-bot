@@ -1,0 +1,14 @@
+body{font-family: Arial, sans-serif;background:#111;color:#fff;padding:10px}
+.container{max-width:480px;margin:0 auto}
+.top h2{border-left:4px solid #fff;padding-left:10px}
+.banner{background:#2b7cff;padding:12px;border-radius:12px;margin:10px 0}
+.cards{display:flex;gap:10px}
+.card{flex:1;padding:20px;border-radius:18px}
+.orange{background:#ffb74d;color:#000}
+.pink{background:#ff6f91}
+.video-list{display:flex;flex-direction:column;gap:12px}
+.vcard{display:flex;gap:10px;background:#222;padding:8px;border-radius:12px}
+.vcard img{width:120px;height:70px;border-radius:8px;object-fit:cover}
+.vinfo{flex:1}
+.btn{display:inline-block;padding:8px 12px;background:#6c5ce7;color:#fff;border-radius:8px;text-decoration:none}
+.bottom-nav{position:fixed;left:0;right:0;bottom:10px;background:#222;padding:10px;border-radius:12px;display:flex;justify-content:space-around}
