@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+<h3>Video Watch</h3>
+<iframe width="100%" height="300" src="https://www.youtube.com/embed/{{ video_url.split('v=')[-1].split('?')[0] }}?autoplay=0" frameborder="0" allowfullscreen></iframe>
+<p id="timer">00:00</p>
+<button id="claim">Claim 30 Coins</button>
+<script>
+let seconds = 0; let required = 180;
+let tid = '{{ tid }}';
+let code = '{{ code }}';
+let timer = setInterval(()=>{
+  seconds++;
+  let mm = String(Math.floor(seconds/60)).padStart(2,'0');
+  let ss = String(seconds%60).padStart(2,'0');
+  document.getElementById('timer').innerText = mm+':'+ss;
+  if(seconds>=required) clearInterval(timer);
+},1000);
+
+document.getElementById('claim').addEventListener('click', async ()=>{
+  if(seconds<required){ alert('कृपया 3 मिनट पूरा देखें'); return; }
+  let res = await fetch('/api/validate_watch',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({tid, code})});
+  let j = await res.json();
+  if(j.ok) alert('आपको 30 कॉइन मिल गए'); else alert('Error: '+ (j.error||'failed'));
+})
+</script>
+{% endblock %}
