@@ -8,15 +8,6 @@ ADMIN_ID = 7470248597
 YOUTUBE_CHANNEL = "https://youtube.com/@kishorsinhzala.?si=uKMVwnB7wV_yoSQN"
 TELEGRAM_GROUP = "@boomupbot10"
 
-# ========== VIDEO CODES ==========
-VIDEO_CODES = {
-    "boom123": "https://youtu.be/QSH5mW7Il00?si=AcLkdNBNSJqGs5y3",
-    "xpress456": "https://youtu.be/cDHi31m0rxI?si=xHUXL54PjtFS-wlN",
-    "kzboom789": "https://youtu.be/k84NTqHakEE?si=q_1FZRrIdjPjWZKa",
-    "flash321": "https://youtu.be/wskpFAMrb6I?si=cx4bYzmwBgY68Qmq",
-    "hindi007": "https://youtu.be/smWCVRNMqh0?si=hBmNoBIMyLLKCoM2"
-}
-
 # ========== KEEP ALIVE (for Replit/Render) ==========
 app = Flask('')
 @app.route('/')
